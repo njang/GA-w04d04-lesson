@@ -1,12 +1,6 @@
-var myModule = require('./wdi_tx_13.js')
+const express = require('express')
+const app = express()
 
-// Variables and such that were not exported aren't in scope
-console.log("number is " + typeof number) // undefined
+app.get('/', (req, res) => res.send('Hello World!'))
 
-// Anything exported can be accessed on the object
-console.log("Campus is: ", myModule.campus)
-
-myModule.onThree();
-myModule.lunch();
-// Let's see the module we imported
-console.log(myModule);
+app.listen(9001, () => console.log('Example app listening on port 9001!'))
