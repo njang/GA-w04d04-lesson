@@ -1,8 +1,8 @@
 const express = require('express'); //from documentation: express is function
 const app = express();//app is an object
 
-app.get('', (request, response) => {
-    response.send('Let\'s start');
+app.get('/', (request, response) => {
+  response.send('Let\'s start!');
 });
 
 // GET ALL RESTAURANTS "/restaurants"
@@ -65,3 +65,4 @@ for (let i = 0; i < restaurants.length; i++) {
 app.listen(3000, () => {
     console.log("I am listening");
 });
+
